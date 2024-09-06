@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Inicio
+    {{ super() }}
+{% endblock %}
+
+{% block content%}
+    <h1>Pagina Inicio</h1>
+    {%  include 'includes/edad.html'%}
+
+    {%  include 'includes/personas.html'%}
+
+
+    {# Esto es un comentario
+        {{dato1}}
+        {{dato2}}
+        {{lista}}
+        #}
+
+{% endblock %}
