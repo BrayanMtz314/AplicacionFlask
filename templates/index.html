@@ -7,15 +7,16 @@
 
 {% block content%}
     <h1>Pagina Inicio</h1>
-    {%  include 'includes/edad.html'%}
+    {% with messages = get_flashed_messages() %} 
+        {% if messages %}
+            {% for message in messages %}
+                <div class="message alert-success">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith%}
 
-    {%  include 'includes/personas.html'%}
 
-
-    {# Esto es un comentario
-        {{dato1}}
-        {{dato2}}
-        {{lista}}
-        #}
 
 {% endblock %}
